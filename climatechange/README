@@ -1,0 +1,16 @@
+July 21, 2015
+
+Data for this application comes Climate Central and Think Progress.  The following interactive graphics were embedded:
+
+- A Country Divided (http://www.climatecentral.org/news/seasonal-warming-in-your-state-18608)
+- Winter loses its cool (http://www.climatecentral.org/wgts/ColdNightsAhead/index.html?utm_source=ext&amp;utm_medium=embed&amp;utm_campaign=ColdNightsAhead)
+- City Future Temps (http://www.climatecentral.org/wgts/CityFutureTemps/index.html?utm_source=ext&amp;utm_medium=embed&amp;utm_campaign=CityFutureTemps)
+- What Every Governor Really Believes About Climate Change (http://thinkprogress.org/climate/2014/07/01/3454502/is-your-governor-a-climate-denier/?utm_source=digg&utm_medium=email)
+
+Troubleshooting: If you have problems loading the application, make sure you have the required packages installed which are listed at the top of server.r.  Try updating the listed packages if not using RStudio Version 0.99.447. The server.r, ui.r, and all other contents of this folder need to be kept in the same directory.
+
+This application looks at inconsistencies in sea level across the US. Intended to aid in the instruction of introductory environmental science courses to help students visualize environmental concepts and data.
+
+Created by the Interactive Environmental Data Team as a part of the Information Initiative at Duke’s Data+ program.
+
+Authors: Aaron Berdanier, Matt Ross, Tess Harper, and Molly Rosenstein. Contact mkr14@duke.edu for questions and feedback.

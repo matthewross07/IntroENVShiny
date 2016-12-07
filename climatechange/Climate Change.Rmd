@@ -1,0 +1,103 @@
+---
+title: "Climate Change in Your Neighborhood"
+author: 
+date:
+runtime: shiny
+output: 
+  html_document:
+    theme: flatly
+    toc: true
+    toc_depth: 1
+---
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+library(leaflet)
+library(shiny)
+
+```
+
+
+#<em>Global Warming vs Climate Change</em>  
+Global warming isn't necessarily an accurate descriptor of our planet's current state  
+- Global warming: the increase in Earth’s average surface temperature due to rising levels of greenhouse gases  
+- Climate change: a long-term change in the Earth’s climate, or of a region on Earth (NASA)  
+
+####<strong>Take a look at the visualizations below from Climate Central, to see what will happen to your hometown in the next 100 years </strong>  
+** While these scenarios may seem doomsday-esque, they accurately represent what a future climate could look like continuing business as usual pattern of consumption of fossil fuels. 
+
+##--------------------------------------------------------------------------------------------------------------
+
+
+#The future of seasons
+Across all seasons and most areas of the globe, 1970 marks a key shift to more rapid warming compared to earlier decades. Some research has linked this to the decline of human aerosol emissions — fine particles that cool the planet — in the wake of clean air laws passed in the U.S. and Europe in the 1970s. That has helped in unmasking the warming impact of greenhouse gases, which have continued to rise at an ever-increasing rate (Climate Central).  
+<iframe frameborder="0" height="565" scrolling="no" src="http://www.climatecentral.org/highcharts/SeasonalTrends/map-700.html?utm_source=ext&amp;utm_medium=embed&amp;utm_campaign=SeasonalStateTrends2015" style="border-color: #000000" width="700"></iframe>
+```{r, echo=FALSE}
+radioButtons("q3", label="Notice the clear divides in regions, are all regions equally vulnerable to climate change?", choices=c("Yes","No"), selected=F)
+output$a3<- reactive({validate(need(input$q3, "Select an Answer"))
+  if (input$q3=="No"){answer<- "Correct"}
+  else{answer<- "Incorrect, try again"}
+  return(answer)
+  })
+  h5(textOutput("a3"), style="color:darkred")
+radioButtons(inputId = "q4", label = "Think in the context of the severe california drought, why might a warmer spring lead to fluctuation in the  water supply?", choices=c("Excess flooding","Lower Snowpack", "More human usage"), selected=F)
+h5(textOutput("a4"), style="color:darkred")
+output$a4<- reactive({validate(need(input$q4, "Select an Answer"))
+  if (input$q4=="Lower Snowpack"){answer<- "Correct, snow helps to slow warming by reflecting rather than absorbing earth's radiation"}
+  else{answer<- "Incorrect, try again"}
+  return(answer)
+  })
+
+
+```
+
+#Winter
+ In spite of the East Coast blizzard and polar vortex of 2014, winters have, on average, been getting warmer since the 1970s. One of the starkest examples of this is the overall drop in the number of nights below freezing in most cities.    
+ Warmer winters can have negative impacts: ski resorts need freezing temperatures for snow, some crops rely on a chill period, and pests can flourish year-round if winter temperatures aren’t cold-enough for them to die off (Climate Central).
+ 
+<iframe frameborder="0" height="700" scrolling="no" src="http://www.climatecentral.org/wgts/ColdNightsAhead/index.html?utm_source=ext&amp;utm_medium=embed&amp;utm_campaign=ColdNightsAhead" style="border-color: #000000" width="720"></iframe>
+```{r, echo=F}
+textInput(inputId = "q1", label = "How many nights below freezing will Durham have in 2100?")
+h5(textOutput("a1"), style="color:darkred")
+output$a1<- reactive({
+  validate( need(input$q1, "Select an Answer") )
+  if(input$q1==19){answer<- "Correct"}
+  else{answer<-"Incorrect"}
+  return(answer)
+})
+
+
+```
+
+#Summer
+Summers in most of the U.S. are already warmer than they were in the 1970s. Climate models show that summers are going to keep getting hotter as greenhouse gas emissions continue. What will this warming feel like? Climate Central's  analysis of future summers illustrates just how dramatic warming is going to be by the end of this century if current emissions trends continue unabated (Climate Central).  
+<iframe frameborder="0" height="700" scrolling="no" src="http://www.climatecentral.org/wgts/CityFutureTemps/index.html?utm_source=ext&amp;utm_medium=embed&amp;utm_campaign=CityFutureTemps" style="border-color: #000000" width="720"></iframe>
+```{r, echo=F}
+textInput("q2", label="How much warmer will average Durham summers be in 2100?")
+h5(textOutput("a2"), style="color:darkred")
+output$a2<- reactive({validate(need(input$q2, "Enter Answer"))
+  if (input$q2==9){answer<- "Correct"}
+  else{answer<- "Incorrect, try again"}
+  return(answer)
+  })
+```
+
+#Is your state taking action?
+<iframe frameborder="0" height="700" scrolling="no"
+src= "http://interactives.americanprogress.org/projects/tp/2014/climate/" style="border-color: #000000" width="720"></iframe>
+
+#Reflection
+- What are your thoughts on the current views of the state governments and the risks posed by climate change?
+- Should we be seeing more governers taking action given the effects of climate change we have felt thus far?
+- How do you feel about your home state's progress?
+- What can be done to see more action on the climate and clean energy front?
+- What do you think will have to happen, to make the state governments realize that climate change is a real threat to our livelihood?
+
+
+##--------------------------------------------------------------------------------------------------------------
+Created by Molly Rosenstein as a part of <a href="http://bigdata.duke.edu/data">Duke Data+</a> Interactive Environmental Data Team 
+
+
+
+
+

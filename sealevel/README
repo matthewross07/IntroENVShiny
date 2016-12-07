@@ -1,0 +1,13 @@
+July 21, 2015
+
+Data for this application came from NOAA’s Tides and Currents Department, and can be found here (http://tidesandcurrents.noaa.gov/sltrends/slrmap.htm, 2013). The aggregated data can be found in the data folder of this application.
+
+Isostasy information from Encyclopedia Brittanica, Isostasy. 
+
+Troubleshooting: If you have problems loading the application, make sure you have the required packages installed which are listed at the top of server.r.  Try updating the listed packages if not using RStudio Version 0.99.447. The server.r, ui.r, and all other contents of this folder need to be kept in the same directory.
+
+This application looks at inconsistencies in sea level across the US. Intended to aid in the instruction of introductory environmental science courses to help students visualize environmental concepts and data.
+
+Created by the Interactive Environmental Data Team as a part of the Information Initiative at Duke’s Data+ program.
+
+Authors: Aaron Berdanier, Matt Ross, Tess Harper, and Molly Rosenstein. Contact mkr14@duke.edu for questions and feedback.

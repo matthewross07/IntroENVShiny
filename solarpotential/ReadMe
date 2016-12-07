@@ -1,0 +1,11 @@
+July 21, 2015
+
+Data for this application comes from The National Renewable Energy Laboratory and the US Census Bureau.  
+
+Troubleshooting: If you have problems loading the application, make sure you have the required packages installed which are listed at the top of server.r. Try updating the listed packages if not using RStudio Version 0.99.447. The server.r, ui.r, and all other contents of this folder need to be kept in the same directory.
+
+This application looks at the distribution of Solar Potential across the US through the medium of interactive choropleth maps. Intended to aid in the instruction of introductory environmental science courses to help students visualize environmental concepts and data. Inspiration for the application comes from "The Environment and You" textbook by Norman Christensen - Chapter 15 - Renewable Energy and Energy Conservation. 
+
+Created by the Interactive Environmental Data Team as a part of the Information Initiative at Duke’s Data+ program.
+
+Authors: Aaron Berdanier, Matt Ross, Tess Harper, and Molly Rosenstein. Contact mkr14@duke.edu for questions and feedback.
