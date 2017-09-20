@@ -213,7 +213,7 @@ gbf <- eventReactive(input$update,{
   else{
     output$error=renderText({("")})
     coords<- datInBounds() 
-    occ_search(taxonKey=input$type, limit=input$limit, hasCoordinate=TRUE, spatialIssues=FALSE, basisOfRecord=input$obs_method,decimalLatitude=coords[1], decimalLongitude=coords[2], fields=c('species','basisOfRecord','decimalLatitude', 'decimalLongitude'), return='data')}
+    occ_search(taxonKey=input$type, limit=input$limit, hasCoordinate=TRUE, hasGeospatialIssues=FALSE, basisOfRecord=input$obs_method,decimalLatitude=coords[1], decimalLongitude=coords[2], fields=c('species','basisOfRecord','decimalLatitude', 'decimalLongitude'), return='data')}
     
     })
 
